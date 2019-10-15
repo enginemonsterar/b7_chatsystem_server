@@ -30,12 +30,21 @@ io.on('connection', function(socket) {
     }
 
     //Position data from client
-    socket.on('updatePosition', function(data){
-        account.position.x = data.position.x;
-        account.position.y = data.position.y;
+    socket.on('sendMessage', function(data){
+        account.id = data.id;
+        account.username = data.username;
+        account.message = data.message;
 
-        socket.broadcast.emit('updatePosition', account);
+        socket.broadcast.emit('sendMessage', account);
     });
+
+    // //Position data from client
+    // socket.on('updatePosition', function(data){
+    //     account.position.x = data.position.x;
+    //     account.position.y = data.position.y;
+
+    //     socket.broadcast.emit('updatePosition', account);
+    // });
 
     socket.on('disconnect', function(){
         console.log('Someone has Disconnect from Server!');

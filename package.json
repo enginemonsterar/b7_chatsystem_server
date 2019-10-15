@@ -1,0 +1,16 @@
+{
+  "name": "chatserver",
+  "version": "1.0.0",
+  "description": "b7 chat system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "januarelsan",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.3",
+    "shortid": "^2.2.15",
+    "socket.io": "^2.3.0"
+  }
+}
